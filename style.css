@@ -1,14 +1,22 @@
 :root{
 
     --primary: #FFCE00; 
-    --secondary: black;
+    --secondary: #171717;
     --light: white;
     --font: 'Roboto', 'Helvetica';
 
 }
 
+/*use root to make the varibales be globally accessible /*
+
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties CSS Variables */ 
 
 h1{
     color:red;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--secondary);
 }

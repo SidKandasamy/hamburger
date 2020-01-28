@@ -19,4 +19,18 @@ body{
     margin:0;
     padding:0;
     background-color: var(--secondary);
+    font-family:var(--font);
+
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    padding: 15px;
+    box-sizing: border-box; /*stops from over flowing*/
 }

@@ -34,3 +34,8 @@ body{
     padding: 15px;
     box-sizing: border-box; /*stops from over flowing*/
 }
+
+.content{
+    width: 100%; /*content fits in box */
+    max-width: 768px; /* keeps content central*/
+}

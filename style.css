@@ -67,3 +67,13 @@ p{
     box-sizing: border-box;
     /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position_top */
 }
+
+.menu .toggle{
+    position: absolute;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+
+    z-index: 999; /*makes toggle come to the very front" */
+}

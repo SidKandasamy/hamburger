@@ -80,7 +80,7 @@ p{
 
 
     z-index: 999; /*makes toggle come to the very front" */
-    opacity: 0px;
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -128,16 +128,17 @@ p{
     background: var(--light);
 }
 
-.menu-wrapper .hamburger .bar::after{
+.menu-wrapper .hamburger .bar::after {
     top: 10px;
 }
 
 /* hamburger menu animation */
 
-.menu-wrapper .toggle:hover+ .hamburger{
+.menu-wrapper .toggle:hover + .hamburger{
     /*this looks for the hamburger menu after the hoover */
 
     transform: rotate(-25deg);
     background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
 
 }

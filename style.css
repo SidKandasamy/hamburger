@@ -132,3 +132,12 @@ p{
     top: 10px;
 }
 
+/* hamburger menu animation */
+
+.menu-wrapper .toggle:hover+ .hamburger{
+    /*this looks for the hamburger menu after the hoover */
+
+    transform: rotate(-25deg);
+    background: rgba(255, 255, 255, 0.1);
+
+}

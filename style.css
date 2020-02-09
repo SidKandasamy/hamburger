@@ -68,12 +68,39 @@ p{
     /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position_top */
 }
 
-.menu .toggle{
+.menu-wrapper .toggle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    
+
+
+    z-index: 999; /*makes toggle come to the very front" */
+    opacity: 0px;
+    cursor: pointer;
+}
+
+/* creating of actual hamburger */
+
+.menu .hamburger{
+    
     position: absolute;
     top: 0px;
     bottom:0px;
     left:0px;
     right:0px;
 
-    z-index: 999; /*makes toggle come to the very front" */
+    z-index: 998;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: all 0.3s ease;
+    /* https://www.w3schools.com/css/css3_transitions.asp */
 }

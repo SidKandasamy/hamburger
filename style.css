@@ -87,6 +87,8 @@ p{
 /* creating of actual hamburger */
 
 .menu .hamburger{
+    width: 50px;
+    height: 50px;
     
     position: absolute;
     top: 0px;
@@ -103,4 +105,14 @@ p{
     padding: 10px;
     transition: all 0.3s ease;
     /* https://www.w3schools.com/css/css3_transitions.asp */
+}
+
+/* hamburger menu creation */
+
+.menu-wrapper .hamburger .bar{
+    position:relative;
+    width: 100%;
+    height: 3px;
+    background: var(--light);
+    
 }

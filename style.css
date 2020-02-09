@@ -67,3 +67,78 @@ p{
     box-sizing: border-box;
     /*https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position_top */
 }
+
+.menu-wrapper .toggle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    
+
+
+    z-index: 999; /*makes toggle come to the very front" */
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* creating of actual hamburger */
+
+.menu .hamburger{
+    width: 50px;
+    height: 50px;
+    
+    position: absolute;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+
+    z-index: 998;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: all 0.3s ease;
+    /* https://www.w3schools.com/css/css3_transitions.asp */
+}
+
+/* hamburger menu creation */
+
+.menu-wrapper .hamburger .bar{
+    position:relative;
+    width: 100%;
+    height: 3px;
+    background: var(--light);
+    z-index: 5;
+    
+}
+
+.menu-wrapper .hamburger .bar::before,
+.menu-wrapper .hamburger .bar::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 3px;
+    background: var(--light);
+}
+
+.menu-wrapper .hamburger .bar::after {
+    top: 10px;
+}
+
+/* hamburger menu animation */
+
+.menu-wrapper .toggle:hover + .hamburger{
+    /*this looks for the hamburger menu after the hoover */
+
+    transform: rotate(-25deg);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+}

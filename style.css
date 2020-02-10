@@ -2,7 +2,7 @@
 
     --primary: #FFCE00; 
     --secondary: #171717;
-    --light: white;
+    --light: #F3F3F3;
     --font: 'Roboto', 'Helvetica';
 
 }
@@ -11,9 +11,7 @@
 
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties CSS Variables */ 
 
-h1{
-    color:red;
-}
+
 
 body{
     margin:0;
@@ -80,13 +78,14 @@ p{
 
 
     z-index: 999; /*makes toggle come to the very front" */
-    opacity: 0;
     cursor: pointer;
+    opacity: 0;
+  
 }
 
 /* creating of actual hamburger */
 
-.menu .hamburger{
+.menu-wrapper .hamburger{
     width: 50px;
     height: 50px;
     
@@ -107,38 +106,47 @@ p{
     /* https://www.w3schools.com/css/css3_transitions.asp */
 }
 
+
+
+
+
+
 /* hamburger menu creation */
 
-.menu-wrapper .hamburger .bar{
-    position:relative;
+.menu-wrapper .hamburger .bar {
+    position: relative;
     width: 100%;
     height: 3px;
     background: var(--light);
     z-index: 5;
-    
-}
-
-.menu-wrapper .hamburger .bar::before,
-.menu-wrapper .hamburger .bar::after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 100%;
-    height: 3px;
-    background: var(--light);
-}
-
+    transition: all 0.2s linear;
+  }
+  
+  .menu-wrapper .hamburger .bar::before,
 .menu-wrapper .hamburger .bar::after {
-    top: 10px;
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 3px;
+  background: var(--light);
+  transition: all 0.2s linear;
 }
-
-/* hamburger menu animation */
-
-.menu-wrapper .toggle:hover + .hamburger{
-    /*this looks for the hamburger menu after the hoover */
-
+  
+  .menu-wrapper .hamburger .bar::after {
+    top: 10px;
+  }
+  
+  .menu-wrapper .toggle:hover + .hamburger {
     transform: rotate(-25deg);
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+  }
+
+/* check if menu has been clicked */
+
+.menu-wrapper .toggle:checked + .hamburger {
+
+    transform:rotate(45deg);
 
 }

@@ -188,5 +188,30 @@ p{
 /*html menu hidden */
 
 
+/* customize actual list element */
+
+.menu ul li{
+    color: var(--light);
+    font-size: 20px;
+    list-style-type: none;
+    cursor: pointer;
+    box-sizing: 15px;
+    margin:0;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+.menu ul li:hover{
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+
+}
+
+.menu-wrapper .toggle:checked + .hamburger + .menu {
+   opacity: 1;
+   width: 100vw;
+   height: 100vh;
 
 
+
+}

@@ -151,9 +151,18 @@ p{
 
 }
 
+.menu-wrapper .toggle:checked:hover + .hamburger {
+
+    transform:rotate(135deg);
+
+}
+
 .menu-wrapper .toggle:checked + .hamburger .bar::before,
 .menu-wrapper .toggle:checked + .hamburger .bar::after{
     top:0;
     transform:rotate(90deg);
 }
-/* when menu is clicked, the 3 bars transform into an x
+/* when menu is clicked, the 3 bars transform into an X
+
+/* create hover state so once its been checked, it stays as a cross */ 
+

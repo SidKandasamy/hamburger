@@ -150,3 +150,10 @@ p{
     transform:rotate(45deg);
 
 }
+
+.menu-wrapper .toggle:checked + .hamburger .bar::before,
+.menu-wrapper .toggle:checked + .hamburger .bar::after{
+    top:0;
+    transform:rotate(90deg);
+}
+/* when menu is clicked, the 3 bars transform into an x

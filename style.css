@@ -164,7 +164,25 @@ p{
     top:0;
     transform:rotate(90deg);
 }
-/* when menu is clicked, the 3 bars transform into an X
+/* when menu is clicked, the 3 bars transform into an X */
+
+.menu{
+    position:fixed;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:0;
+    height: 0;
+    overflow:hidden; /*so its not seen */ 
+    background: rgba(35, 35, 35, 0.85);
+    z-index: 1;
+    transition: all 0.3s ease;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+
+
+}
 
 
 

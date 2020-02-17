@@ -150,3 +150,68 @@ p{
     transform:rotate(45deg);
 
 }
+
+.menu-wrapper .toggle:checked:hover + .hamburger {
+
+    transform:rotate(135deg);
+
+}
+
+/* create hover state so once its been checked, it stays as a cross */ 
+
+.menu-wrapper .toggle:checked + .hamburger .bar::before,
+.menu-wrapper .toggle:checked + .hamburger .bar::after{
+    top:0;
+    transform:rotate(90deg);
+}
+/* when menu is clicked, the 3 bars transform into an X */
+
+.menu{
+    position:fixed;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:0;
+    height: 0;
+    overflow:hidden; /*so its not seen */ 
+    background: rgba(35, 35, 35, 0.85);
+    z-index: 1;
+    transition: all 0.3s ease;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    
+
+
+}
+
+/*html menu hidden */
+
+
+/* customize actual list element */
+
+.menu ul li{
+    color: var(--light);
+    font-size: 20px;
+    list-style-type: none;
+    cursor: pointer;
+    box-sizing: 15px;
+    margin:0;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+.menu ul li:hover{
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+
+}
+
+.menu-wrapper .toggle:checked + .hamburger + .menu {
+   opacity: 1;
+   width: 100vw;
+   height: 100vh;
+
+
+
+}
